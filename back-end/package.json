@@ -1,0 +1,29 @@
+{
+  "name": "dota2-hero-vote",
+  "version": "1.0.0",
+  "description": "a full stack sample,include nodejs,express,mongodb,react,etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Y-Coding/dota2-hero-vote.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Y-Coding/dota2-hero-vote/issues"
+  },
+  "homepage": "https://github.com/Y-Coding/dota2-hero-vote#readme",
+  "dependencies": {
+    "async": "^2.1.2",
+    "babel": "^6.5.2",
+    "body-parser": "^1.15.2",
+    "colors": "^1.1.2",
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.8",
+    "request": "^2.79.0"
+  }
+}
