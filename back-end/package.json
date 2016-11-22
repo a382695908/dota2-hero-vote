@@ -4,7 +4,8 @@
   "description": "a full stack sample,include nodejs,express,mongodb,react,etc",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon -- src/app.js",
+    "test": "nodemon --config nodemon.json"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,20 @@
     "compression": "^1.6.2",
     "express": "^4.14.0",
     "mongoose": "^4.6.8",
-    "request": "^2.79.0"
+    "morgan": "^1.7.0",
+    "pm2": "^2.1.5",
+    "request": "^2.79.0",
+    "socket.io": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^0.0.33",
+    "@types/compression": "^0.0.33",
+    "@types/express": "^4.0.34",
+    "@types/mongoose": "^4.6.1",
+    "@types/node": "^6.0.49",
+    "@types/socket.io": "^1.4.27",
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "nodemon": "^1.11.0"
   }
 }
