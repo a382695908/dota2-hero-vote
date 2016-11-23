@@ -4,7 +4,12 @@
   "description": "a full stack sample,include nodejs,express,mongodb,react,etc",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --config build/webpack.dev.config.js",
+    "lint:js": "eslint src",
+    "lint:css": "stylelint \"src/**/*.{css,less,scss,sss}\"",
+    "lint": "npm run lint:js && npm run lint:css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:watch": "npm run test -- --reporter min --watch"
   },
   "repository": {
     "type": "git",
@@ -17,10 +22,58 @@
   },
   "homepage": "https://github.com/Y-Coding/dota2-hero-vote#readme",
   "dependencies": {
+    "fastclick": "^1.0.6",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
     "react-router": "^3.0.0",
     "socket.io": "^1.6.0",
+    "whatwg-fetch": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.50",
+    "@types/react": "^0.14.50",
+    "@types/react-dom": "^0.14.19",
+    "@types/react-router": "^2.0.39",
+    "@types/webpack": "^2.0.0",
+    "assets-webpack-plugin": "^3.5.0",
+    "autoprefixer": "^6.5.3",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-optimize": "^1.0.1",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "babel-runtime": "^6.18.0",
+    "babel-template": "^6.16.0",
+    "babel-types": "^6.19.0",
+    "browser-sync": "^2.18.2",
+    "css-loader": "^0.26.0",
+    "eslint": "^3.10.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.1",
+    "eslint-plugin-react": "^6.7.1",
+    "extend": "^3.0.0",
+    "file-loader": "^0.9.0",
+    "json-loader": "^0.5.4",
+    "mocha": "^3.1.2",
+    "raw-loader": "^0.5.1",
+    "react-addons-test-utils": "^15.4.1",
+    "react-deep-force-update": "^2.0.1",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "rimraf": "^2.5.4",
+    "stylelint": "^7.6.0",
+    "stylelint-config-standard": "^15.0.0",
+    "url-loader": "^0.5.7",
     "webpack": "2.1.0-beta.27"
+  },
+  "engines": {
+    "node": ">=6.5",
+    "npm": ">=3.10"
   }
 }
