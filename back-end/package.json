@@ -39,5 +39,9 @@
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
     "nodemon": "^1.11.0"
-  }
+  },
+  "engines" : { 
+    "node" : ">7.0.0",
+    "npm":">=3.x.x"
+   }
 }
