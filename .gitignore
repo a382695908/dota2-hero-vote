@@ -18,3 +18,4 @@ node_modules
 .npm
 
 .idea/
+./front-end/build
