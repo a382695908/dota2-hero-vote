@@ -1,6 +1,7 @@
 /**
  * Created by yyj on 11/24/16.
  */
+'use strict';
 
 let config = require('./webpack.config.babel');
 let webpack = require('webpack');
