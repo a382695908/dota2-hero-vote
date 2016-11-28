@@ -1,6 +1,7 @@
 /**
  * Created by yyj on 23/11/2016.
  */
+ 'use strict'
 
 import path from 'path';
 import webpack from 'webpack';

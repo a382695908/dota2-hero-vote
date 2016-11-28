@@ -33,7 +33,6 @@
     "@types/webpack": "^2.0.0",
     "react-scripts": "^0.7.0"
   },
-
   "engines": {
     "node": ">=7.1.0",
     "npm": ">=3.10"
