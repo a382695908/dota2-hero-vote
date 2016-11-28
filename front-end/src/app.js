@@ -1,0 +1,20 @@
+/**
+ * Created by yyj on 11/28/16.
+ */
+import React,{Component} from 'react';
+import {Link} from 'react-router';
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <ul className="nav">
+          <li><Link to="/about">About</Link></li>
+        </ul>
+        {this.props.children}
+      </div>
+    )
+  }
+}
+
+export default App;

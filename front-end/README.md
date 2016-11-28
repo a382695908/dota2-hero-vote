@@ -4,6 +4,7 @@
 * react
 * socket.io 
 * [webpack2](https://webpack.js.org/)
+* [bootstarp3](http://v3.bootcss.com/)
 
 # 教程
 * 部分参考[http://idlelife.org/archives/977](http://idlelife.org/archives/977)
