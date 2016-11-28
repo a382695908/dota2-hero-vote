@@ -13,4 +13,6 @@
 ## todo
 * 使用webpack2
 * 服务端渲染react
+* 使用`HistoryLocation`,并服务器路由重写
+* 
 
