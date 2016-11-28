@@ -103,7 +103,10 @@ module.exports = {
         test: /\.(js|jsx)$/,
         include: paths.appSrc,
         loader: 'babel',
-        
+      },
+      {
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract('style',"css!less?-autoprefixer!postcss")
       },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.
