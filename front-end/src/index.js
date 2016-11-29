@@ -11,6 +11,8 @@ import {Router, hashHistory} from 'react-router';
 
 import App from './app'; //首字母小写就是文件，大写是目录
 import Home from './Home';
+import Login from './Login';
+import Logout from './Logout';
 import About from './About';
 import NoMatch from './NoMatch';
 
@@ -20,6 +22,8 @@ const routes = {
   component: App,
   indexRoute: { component: Home },
   childRoutes: [
+    { path: 'logout', component: Logout },
+    { path: 'login', component: Login },
     { path: 'about', component: About },
     { path: '*', component: NoMatch },
   ]
