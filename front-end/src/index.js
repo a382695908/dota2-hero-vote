@@ -2,6 +2,7 @@
  * Created by yyj on 11/24/16.
  */
 
+import 'material-design-lite/material.css'
 import './index.less';
 
 import React from 'react';

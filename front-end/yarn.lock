@@ -3643,6 +3643,10 @@ marked@^0.3.6:
   version "0.3.6"
   resolved "http://registry.npm.taobao.org/marked/download/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
 
+material-design-lite@^1.2.1:
+  version "1.2.1"
+  resolved "http://registry.npm.taobao.org/material-design-lite/download/material-design-lite-1.2.1.tgz#09e5caab2575af8ee21b2630bff175c5a822c662"
+
 material-ui@^0.16.4:
   version "0.16.4"
   resolved "http://registry.npm.taobao.org/material-ui/download/material-ui-0.16.4.tgz#b1ff4ea57069a89611b7e02a83d47c649e13c798"

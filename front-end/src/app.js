@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 import {Link} from 'react-router';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 // import Checkbox from 'material-ui/Checkbox';
 // import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 // import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -18,17 +18,34 @@ class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider>
-        <div>
-          <ul className="nav">
-           <li><Link to="/index">index</Link></li>
-           <li><Link to="/about">About</Link></li>
-           <li><Link to="/login">login</Link></li>
-           <li><Link to="/logout">logout</Link></li>
-          </ul>
-          {this.props.children}
+      <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header className="mdl-layout__header">
+          <div className="mdl-layout__header-row">
+            <span className="mdl-layout-title">hero-vote-react</span>
+            <div className="mdl-layout-spacer"></div>
+            <nav className="mdl-navigation">
+              <Link to="/index" className="mdl-navigation__link">index</Link>
+              <Link to="/about" className="mdl-navigation__link">About</Link>
+              <Link to="/login" className="mdl-navigation__link">login</Link>
+              <Link to="/logout" className="mdl-navigation__link">logout</Link>
+            </nav>
+          </div>
+        </header>
+        <div className="mdl-layout__drawer">
+          <span className="mdl-layout-title">hero-vote-react</span>
+          <nav className="mdl-navigation">
+            <Link to="/index" className="mdl-navigation__link">index</Link>
+            <Link to="/about" className="mdl-navigation__link">About</Link>
+            <Link to="/login" className="mdl-navigation__link">login</Link>
+            <Link to="/logout" className="mdl-navigation__link">logout</Link>
+          </nav>
         </div>
-      </MuiThemeProvider>
+        <main className="mdl-layout__content">
+          <div className="page-content">
+            {this.props.children}
+          </div>
+        </main>
+      </div>
     )
   }
 }
