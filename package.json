@@ -4,8 +4,8 @@
   "description": "a full stack sample,include nodejs,express,mongodb,react,etc",
   "main": "index.js",
   "scripts": {
-    "edit": "swagger project edit swagger",
-    "start":"swagger project start swagger"
+    "edit": "swagger project edit mocks",
+    "start":"swagger project start mocks"
   },
   "repository": {
     "type": "git",
