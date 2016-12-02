@@ -35,7 +35,7 @@ class App extends Component {
               <IndexLink to="/" className="mdl-navigation__link" activeClassName="active">index</IndexLink>
               <Link to="/about" className="mdl-navigation__link" activeClassName="active">About</Link>
               <Link to="/login" className="mdl-navigation__link" activeClassName="active">login</Link>
-              <Link to="/logout" className="mdl-navigation__link" activeClassName="active">logout</Link>
+              <Link to="/signup" className="mdl-navigation__link" activeClassName="active">signup</Link>
             </nav>
           </div>
         </header>
@@ -45,7 +45,7 @@ class App extends Component {
             <IndexLink to="/" className="mdl-navigation__link" activeClassName="active">index</IndexLink>
             <Link to="/about" className="mdl-navigation__link" activeClassName="active">About</Link>
             <Link to="/login" className="mdl-navigation__link" activeClassName="active">login</Link>
-            <Link to="/logout" className="mdl-navigation__link" activeClassName="active">logout</Link>
+            <Link to="/signup" className="mdl-navigation__link" activeClassName="active">signup</Link>
           </nav>
         </div>
         <main className="mdl-layout__content">
