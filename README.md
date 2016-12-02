@@ -11,8 +11,8 @@ cd back-end
 cd front-end
 ```
 ### api
-I use swagger to generate api document
-
+I use swagger to generate api document\
+the api url is [https://app.swaggerhub.com/api/yyjazsf/hero-vote/1.0.0](https://app.swaggerhub.com/api/yyjazsf/hero-vote/1.0.0)
 ```bash
 npm install -g swagger
 
