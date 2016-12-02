@@ -20,9 +20,8 @@ import NoMatch from './NoMatch';
 const routes = {
   path: '/',
   component: App,
-  indexRoute: { component: Home },
+  indexRoute: { component: Home},
   childRoutes: [
-    { path: 'index', component: Home },
     { path: 'logout', component: Logout },
     { path: 'login', component: Login },
     { path: 'about', component: About },

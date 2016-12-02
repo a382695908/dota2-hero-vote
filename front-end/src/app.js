@@ -2,7 +2,7 @@
  * Created by yyj on 11/28/16.
  */
 import React, {Component} from 'react';
-import {Link} from 'react-router';
+import {Link, IndexLink} from 'react-router';
 // import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 // import Checkbox from 'material-ui/Checkbox';
 // import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
@@ -12,32 +12,40 @@ import {Link} from 'react-router';
 // import RaisedButton from 'material-ui/RaisedButton';
 
 class App extends Component {
-  state={
-    login: false
-  };
-
+  
+  constructor(){
+    super();
+    this.state={
+      login: false,
+      showLayout: true
+    };
+  }
   render() {
+    let showLayout={};
+    if(!this.state.showLayout){
+      showLayout.display = 'none';
+    }
     return (
       <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header className="mdl-layout__header">
+        <header className="mdl-layout__header" style={showLayout}>
           <div className="mdl-layout__header-row">
             <span className="mdl-layout-title">hero-vote-react</span>
             <div className="mdl-layout-spacer"></div>
             <nav className="mdl-navigation">
-              <Link to="/index" className="mdl-navigation__link">index</Link>
-              <Link to="/about" className="mdl-navigation__link">About</Link>
-              <Link to="/login" className="mdl-navigation__link">login</Link>
-              <Link to="/logout" className="mdl-navigation__link">logout</Link>
+              <IndexLink to="/" className="mdl-navigation__link" activeClassName="active">index</IndexLink>
+              <Link to="/about" className="mdl-navigation__link" activeClassName="active">About</Link>
+              <Link to="/login" className="mdl-navigation__link" activeClassName="active">login</Link>
+              <Link to="/logout" className="mdl-navigation__link" activeClassName="active">logout</Link>
             </nav>
           </div>
         </header>
         <div className="mdl-layout__drawer">
           <span className="mdl-layout-title">hero-vote-react</span>
           <nav className="mdl-navigation">
-            <Link to="/index" className="mdl-navigation__link">index</Link>
-            <Link to="/about" className="mdl-navigation__link">About</Link>
-            <Link to="/login" className="mdl-navigation__link">login</Link>
-            <Link to="/logout" className="mdl-navigation__link">logout</Link>
+            <IndexLink to="/" className="mdl-navigation__link" activeClassName="active">index</IndexLink>
+            <Link to="/about" className="mdl-navigation__link" activeClassName="active">About</Link>
+            <Link to="/login" className="mdl-navigation__link" activeClassName="active">login</Link>
+            <Link to="/logout" className="mdl-navigation__link" activeClassName="active">logout</Link>
           </nav>
         </div>
         <main className="mdl-layout__content">
