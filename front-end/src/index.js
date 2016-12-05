@@ -5,10 +5,11 @@
 // import 'material-design-lite/material.css'
 import './index.less';
 
+import 'fastclick';
 import React from 'react';
 import { render } from 'react-dom'
 import { Router, hashHistory } from 'react-router';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+// import {Provider} from 'react-redux';
 
 import App from './app'; //首字母小写就是文件，大写是目录
 import Home from './Home';
@@ -24,17 +25,11 @@ const routes = {
   childRoutes: [
     {
       path: 'signup',
-      component: SignUp,
-      onEnter: (nextState, replace) => {
-        
-      }
+      component: SignUp
     },
     {
       path: 'login',
-      component: Login,
-      onEnter: (nextState, replace) => {
-        
-      }
+      component: Login
     },
     { 
       path: 'about', 
@@ -43,10 +38,8 @@ const routes = {
     { 
       path: '*', 
       component: NoMatch 
-    },
+    }
   ]
 };
-
-injectTapEventPlugin();
 
 render(<Router history={hashHistory} routes={routes}></Router>, document.getElementById('root'));
