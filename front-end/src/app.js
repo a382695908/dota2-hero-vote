@@ -3,21 +3,15 @@
  */
 import React, {Component} from 'react';
 import {Link, IndexLink} from 'react-router';
-// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// import Checkbox from 'material-ui/Checkbox';
-// import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-// import getMuiTheme from 'material-ui/styles/getMuiTheme';
-// import AppBar from 'material-ui/AppBar';
-// import Dialog from 'material-ui/Dialog';
-// import RaisedButton from 'material-ui/RaisedButton';
 
 class App extends Component {
-  
+
   constructor(){
     super();
     this.state={
       login: false,
-      showLayout: true
+      showLayout: true,
+      loading:true
     };
   }
   render() {
@@ -27,6 +21,7 @@ class App extends Component {
     }
     return (
       <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        {/*<div className="mdl-spinner mdl-js-spinner is-active"></div>*/}
         <header className="mdl-layout__header" style={showLayout}>
           <div className="mdl-layout__header-row">
             <span className="mdl-layout-title">hero-vote-react</span>
@@ -53,6 +48,15 @@ class App extends Component {
             {this.props.children}
           </div>
         </main>
+        <footer className="mdl-mini-footer">
+          <div className="mdl-mini-footer__left-section">
+            {/*<div className="mdl-logo">Title</div>*/}
+            <ul className="mdl-mini-footer__link-list">
+              <li><Link to="/about">About</Link></li>
+              <li>备案号:123456</li>
+            </ul>
+          </div>
+        </footer>
       </div>
     )
   }

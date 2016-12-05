@@ -6,6 +6,7 @@
 import './index.less';
 
 import 'fastclick';
+import 'dialog-polyfill';// mdl use dialog tag
 import React from 'react';
 import { render } from 'react-dom'
 import { Router, hashHistory } from 'react-router';
@@ -31,13 +32,13 @@ const routes = {
       path: 'login',
       component: Login
     },
-    { 
-      path: 'about', 
-      component: About 
+    {
+      path: 'about',
+      component: About
     },
-    { 
-      path: '*', 
-      component: NoMatch 
+    {
+      path: '*',
+      component: NoMatch
     }
   ]
 };

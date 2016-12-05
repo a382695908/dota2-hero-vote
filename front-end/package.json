@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Y-Coding/dota2-hero-vote#readme",
   "dependencies": {
+    "dialog-polyfill": "^0.4.5",
     "fastclick": "^1.0.6",
     "immutable": "^3.8.1",
     "material-design-lite": "^1.2.1",
@@ -84,7 +85,7 @@
     "webpack-manifest-plugin": "1.1.0"
   },
   "engines": {
-    "node": ">=7.1.0",
+    "node": ">=6.6.0",
     "npm": ">=3.10"
   },
   "jest": {
