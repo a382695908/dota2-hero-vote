@@ -3,12 +3,12 @@
  */
 import React, {Component} from 'react';
 import {Link} from 'react-router';
-import './signup.less';
+import './sign-up.less';
 
 class SignUp extends Component {
   render() {
     return (
-      <div className="page-sign-up">
+      <div className="page-sign-up view-center-box">
         <h5>join and vote</h5>
         <from className="" method="post" autoComplete="off" noValidate>
           <div className="mdl-grid">
