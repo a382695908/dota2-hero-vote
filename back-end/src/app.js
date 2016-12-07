@@ -18,7 +18,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // todo add api
 
 router(app);
-console.log('>>>>>>>>>>>>>>>>>>>>>>',router);
 app.use(function(req,res,next){
 	console.log('app.use');
 });
