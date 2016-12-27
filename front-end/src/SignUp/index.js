@@ -12,6 +12,7 @@ class SignUp extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
+      username  : '',
       email     : '',
       password  : '',
       confirmpwd: ''
@@ -25,7 +26,7 @@ class SignUp extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
+    
     console.log('email', this.refs.email.value);
     console.log('password', this.refs.password.value);
     console.log('confirmpwd', this.refs.confirmpwd.value);
