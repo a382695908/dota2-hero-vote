@@ -8,7 +8,7 @@
       "name": "Launch Program",
       "type": "node2",
       "request": "launch",
-      "program": "-r babel-core/register ${workspaceRoot}/src/app.js",
+      "program": "node ${workspaceRoot}/index.js",
       "cwd": "${workspaceRoot}"
     },
     {
