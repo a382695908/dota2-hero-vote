@@ -17,14 +17,19 @@ export default async function (req, res, next) {
 
   if (user) {
     const token = jwt.sign(
-      { username: user.username },
+      {
+        _id: user._id,
+      },
       config.secret,
       {
         expiresIn: '1d',
       },
     );
     await utils.redis.set(token, {
+      _id: user._id,
       username: user.username,
+      email: user.email,
+      enable: user.enable,
       // 权限
     }, 60 * 60 * 3)// 3h
 

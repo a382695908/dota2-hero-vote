@@ -13,15 +13,21 @@ export default mongoose.model('Hero', new Schema({
   },
   enName:{
     type: String,
-    required: true
+    required: true,
   },
   nick: String,
-  type: {
-    type: Number,
-    required: true
+  imgUrl:{
+    type: String,
+    required: true,
   },
+  type: { // Strength Agility Intelligence
+    type: Number,
+    required: true,
+  },
+
   vote: {
     type: Number,
-    required: true
+    required: true,
+    default: 0,
   },
 }))

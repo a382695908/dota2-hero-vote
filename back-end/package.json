@@ -4,8 +4,8 @@
   "description": "a full stack sample,include nodejs,express,mongodb,react,etc",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -- index.js",
-    "test": "node -r babel-core/register ./src/app.js"
+    "start": "nodemon --watch src index.js",
+    "test": "nodemon --config nodemon.json index.js"
   },
   "repository": {
     "type": "git",
@@ -31,13 +31,15 @@
     "jsonwebtoken": "^7.2.1",
     "mongoose": "^4.7.4",
     "morgan": "^1.7.0",
+    "nodemailer": "^2.7.0",
     "passport": "^0.3.2",
     "passport-github": "^1.1.0",
     "passport-local": "^1.0.0",
     "pm2": "^2.2.2",
     "qs": "^6.3.0",
     "socket.io": "^1.7.2",
-    "uuid": "^3.0.1"
+    "uuid": "^3.0.1",
+    "validator": "^6.2.0"
   },
   "devDependencies": {
     "@types/body-parser": "^0.0.33",

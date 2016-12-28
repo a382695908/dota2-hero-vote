@@ -1,19 +1,19 @@
 {
   "verbose": true,
+
+  "restartable": "rs",
   "ignore": [
-    "*.test.js", 
-    "fixtures/*",
+    "*.test.js",
     ".git",
     "node_modules/*"
   ],
   "execMap": {
-    "babel-node":"babel-node --presets=/*a*/ --ignore='foo|bar|baz'"
   },
   "watch": [
     "./src/"
   ],
   "env": {
     "NODE_ENV": "development"
-  }
-
+  },
+  "ext": "js json"
 }

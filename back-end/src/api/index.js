@@ -13,6 +13,7 @@ import auth from './user/auth'
 
 // 下面的需要auth
 import userQuery from './user/query'
+import userUpdate from './user/update';
 
 import heroCreate from './hero/create'
 import heroUpdate from './hero/update'
@@ -24,9 +25,11 @@ api.post('/user/signin', signin);
 api.post('/user/signup', signup);
 api.get('/hero', heroQuery);
 
+// 下面的路由需要登录
 api.use(auth);
 
 api.get('/user', userQuery);
+api.put('/user/:id', userUpdate);
 
 api.post('/hero', heroCreate);
 api.put('/hero/:id', heroUpdate);
