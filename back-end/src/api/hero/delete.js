@@ -12,7 +12,7 @@ export default function (req, res, next) {
     .then(data => {
       res.json({
         success: true,
-        msg: `英雄${data.name}删除成功`,
+        msg: `删除成功`,
       })
     })
     .catch(err => next(err));
