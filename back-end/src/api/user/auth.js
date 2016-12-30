@@ -15,17 +15,20 @@ export default function (req, res, next) {
   async function processJwt(err, decoded) {
     let auth = await utils.redis.get(req.headers.authorization);
     if(!auth){
-      res.status(401)
+      return res
+        .status(401)
         .send({
         success: false,
         msg: `token无效或过期:${req.headers.authorization}`,
       });
     }
     else if (err) {
-      res.status(401).send({
-        success: false,
-        msg: `无效的token:${err.message}`,
-      });
+      return res
+        .status(401)
+        .send({
+          success: false,
+          msg: `无效的token:${err.message}`,
+        });
       /*
        err = {
        name: 'TokenExpiredError',
@@ -42,7 +45,7 @@ export default function (req, res, next) {
     jwt.verify(req.headers.authorization, config.secret, processJwt);
   }
   else{
-    res.status(403).send('forbidden!');
+    return res.status(403).send('forbidden!');
   }
 }
 
