@@ -24,10 +24,12 @@ export default mongoose.model('Hero', new Schema({
     type: Number,
     required: true,
   },
-
-  vote: {
+  likeCount: {
     type: Number,
-    required: true,
     default: 0,
+  },
+  likes: {
+    type: Array,
+    default: [],
   },
 }))
