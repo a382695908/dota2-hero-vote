@@ -2765,7 +2765,7 @@ oauth-sign@~0.8.1:
 
 oauth@0.9.x:
   version "0.9.14"
-  resolved "https://registry.yarnpkg.com/oauth/-/oauth-0.9.14.tgz#c5748883a40b53de30ade9cabf2100414b8a0971"
+  resolved "http://registry.npm.taobao.org/oauth/download/oauth-0.9.14.tgz#c5748883a40b53de30ade9cabf2100414b8a0971"
 
 object-assign@4.1.0, object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.0"
@@ -2874,9 +2874,9 @@ parseurl@~1.3.1:
   version "1.3.1"
   resolved "http://registry.npm.taobao.org/parseurl/download/parseurl-1.3.1.tgz#c8ab8c9223ba34888aa64a297b28853bec18da56"
 
-passport-github@^1.1.0:
-  version "1.1.0"
-  resolved "http://registry.npm.taobao.org/passport-github/download/passport-github-1.1.0.tgz#8ce1e3fcd61ad7578eb1df595839e4aea12355d4"
+passport-github2@^0.1.10:
+  version "0.1.10"
+  resolved "http://registry.npm.taobao.org/passport-github2/download/passport-github2-0.1.10.tgz#50a21c1e95b83113e4da32c81c2c1a64429bb5bd"
   dependencies:
     passport-oauth2 "1.x.x"
 
@@ -2888,7 +2888,7 @@ passport-local@^1.0.0:
 
 passport-oauth2@1.x.x:
   version "1.4.0"
-  resolved "https://registry.yarnpkg.com/passport-oauth2/-/passport-oauth2-1.4.0.tgz#f62f81583cbe12609be7ce6f160b9395a27b86ad"
+  resolved "http://registry.npm.taobao.org/passport-oauth2/download/passport-oauth2-1.4.0.tgz#f62f81583cbe12609be7ce6f160b9395a27b86ad"
   dependencies:
     oauth "0.9.x"
     passport-strategy "1.x.x"
@@ -3693,7 +3693,7 @@ uid-number@~0.0.6:
 
 uid2@0.0.x:
   version "0.0.3"
-  resolved "https://registry.yarnpkg.com/uid2/-/uid2-0.0.3.tgz#483126e11774df2f71b8b639dcd799c376162b82"
+  resolved "http://registry.npm.taobao.org/uid2/download/uid2-0.0.3.tgz#483126e11774df2f71b8b639dcd799c376162b82"
 
 ultron@1.0.x:
   version "1.0.2"

@@ -10,6 +10,11 @@ import cookieParser from 'cookie-parser';
 import busboy from 'connect-busboy'
 import bytes from 'bytes';
 import mongoose from 'mongoose';
+
+import passport from 'passport';
+import { Strategy } from 'passport-github2'
+import github from './api/user/github';
+
 import config from './config';
 import API from './api';
 
@@ -28,6 +33,21 @@ app.use(busboy({
 
 mongoose.connect(config.database);
 mongoose.Promise = Promise;
+
+app.enable('trust proxy');
+
+app.use(passport.initialize());
+
+// github oauth
+passport.serializeUser((user, done) => {
+  done(null, user);
+});
+passport.deserializeUser((user, done) => {
+  done(null, user);
+});
+passport.use(new Strategy(config.GITHUB_OAUTH, github));
+
+
 
 app.use('/api', API); // /v1
 

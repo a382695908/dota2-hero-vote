@@ -10,6 +10,8 @@ export default function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+
+  //todo log  http-action url JONS.stringify(req.body) req.ip req.auth.username
   console.log(req.headers['x-forwarded-for'] || req.connection.remoteAddress);
 
   async function processJwt(err, decoded) {

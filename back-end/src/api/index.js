@@ -2,6 +2,7 @@
  *
  */
 import Express from 'express'
+import passport from 'passport';
 
 // 公共api
 import signup from './user/signup'
@@ -24,6 +25,14 @@ let api = Express.Router();
 api.post('/user/signin', signin);
 api.post('/user/signup', signup);
 api.get('/hero', heroQuery);
+
+// api.get('/auth/github', passport.authenticate('github', { scope: [ 'user:email' ] }));
+//
+// api.get('/auth/github/callback', passport.authenticate('github', { failureRedirect: '/login' }),
+//   function(req, res) {
+//     // Successful authentication, redirect home.
+//     res.redirect('/');
+//   });
 
 // 下面的路由需要登录
 api.use(auth);

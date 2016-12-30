@@ -28,6 +28,13 @@ let config = {
     path: path.join(__dirname, 'public/upload/'),
     url: '/public/upload/'
   },
+
+  // github 登陆的配置
+  GITHUB_OAUTH: {
+    clientID: '444e32d4b0046821de79',
+    clientSecret: '7215422a1f287be1b613018e4d6aae181de3de7f',
+    callbackURL: 'http://127.0.0.1:3000/auth/github/callback'
+  },
 };
 
 if (process.env.NODE_ENV === 'test') {

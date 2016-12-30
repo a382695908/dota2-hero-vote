@@ -34,4 +34,5 @@ export default mongoose.model('User', new Schema({
     required: true,
     default: new Date()
   },
+  githubId: String
 }))
