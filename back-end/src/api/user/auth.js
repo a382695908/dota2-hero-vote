@@ -10,7 +10,7 @@ export default function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
-  console.log(req.ip);
+  console.log(req.headers['x-forwarded-for'] || req.connection.remoteAddress);
 
   async function processJwt(err, decoded) {
     let auth = await utils.redis.get(req.headers.authorization);

@@ -3,7 +3,6 @@
  */
 
 import Hero from '../../models/hero';
-import mongoose from 'mongoose';
 
 export default async function (req, res, next) {
   // 投票
