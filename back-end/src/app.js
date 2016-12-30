@@ -12,7 +12,7 @@ import bytes from 'bytes';
 import mongoose from 'mongoose';
 
 import passport from 'passport';
-import { Strategy } from 'passport-github2'
+import { Strategy } from 'passport-github';
 import github from './api/user/github';
 
 import config from './config';
