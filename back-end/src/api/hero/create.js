@@ -14,7 +14,7 @@ export default function (req, res, next) {
     nick: req.body.nick,
     imgUrl: req.body.imgUrl || 'images/hero/default.jpg',
     type: req.body.type,
-    vote: req.body.vote || 0,
+
   })
     .save()
     .then(data => {
