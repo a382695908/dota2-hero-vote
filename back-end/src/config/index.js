@@ -21,7 +21,9 @@ let config = {
   },
 
   // auto create users when /init
-  admins: { yyjazsf: true },
+  admins: [
+    'yyjazsf',
+  ],
 
   upload: {
     file_limit: '100M',

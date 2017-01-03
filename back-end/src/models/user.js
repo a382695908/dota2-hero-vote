@@ -34,5 +34,10 @@ export default mongoose.model('User', new Schema({
     required: true,
     default: new Date()
   },
-  githubId: String
+  githubId: String,
+  type: {
+    type: String,
+    required: true,
+    // default: 0, // 默认普通用户
+  },
 }))
