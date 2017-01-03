@@ -16,13 +16,13 @@ export default function (req, res, next) {
 
   async function processJwt(err, decoded) {
     let auth = await utils.redis.get(req.headers.authorization);
-    if(!auth){
+    if (!auth) {
       return res
         .status(401)
         .send({
-        success: false,
-        msg: `token无效或过期:${req.headers.authorization}`,
-      });
+          success: false,
+          msg: `token无效或过期:${req.headers.authorization}`,
+        });
     }
     else if (err) {
       return res
@@ -46,7 +46,7 @@ export default function (req, res, next) {
   if (req.headers.authorization) {
     jwt.verify(req.headers.authorization, config.secret, processJwt);
   }
-  else{
+  else {
     return res.status(403).send('forbidden!');
   }
 }

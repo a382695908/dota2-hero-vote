@@ -2,7 +2,7 @@
  *
  */
 import Express from 'express'
-import passport from 'passport';
+// import passport from 'passport';
 
 // 公共api
 import signup from './user/signup'
