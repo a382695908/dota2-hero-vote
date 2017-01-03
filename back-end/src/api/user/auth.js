@@ -39,6 +39,7 @@ export default function (req, res, next) {
        }
        */
     }
+    res.locals.user = JSON.parse(auth); //todo use xxx.locals.xxx
     req.auth = JSON.parse(auth);
     next();
   }
