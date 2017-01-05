@@ -26,9 +26,8 @@ let config = {
   ],
 
   upload: {
-    file_limit: '100M',
-    path: path.join(__dirname, 'public/upload/'),
-    url: '/public/upload/'
+    file_limit: '50MB',
+    url: 'public/upload',
   },
 
   // github 登陆的配置

@@ -47,8 +47,6 @@ passport.deserializeUser((user, done) => {
 });
 passport.use(new Strategy(config.GITHUB_OAUTH, github));
 
-
-
 app.use('/api', API); // /v1
 
 /**

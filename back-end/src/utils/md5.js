@@ -4,10 +4,10 @@
 
 import crypto from 'crypto';
 
-export default function (val) {
+export default function (val, type = 'base64') {
 
   return crypto
     .createHash('md5')
     .update(val, 'utf-8')
-    .digest('base64');
+    .digest(type);
 }

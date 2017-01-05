@@ -13,6 +13,8 @@ import heroQuery from './hero/query'
 import auth from './user/auth'
 
 // 下面的需要auth
+import upload from './common/file';
+
 import userQuery from './user/query'
 import userUpdate from './user/update';
 
@@ -36,6 +38,8 @@ api.get('/hero', heroQuery);
 
 // 下面的路由需要登录
 api.use(auth);
+
+api.post('/file', upload);
 
 api.get('/user', userQuery);
 api.put('/user/:id', userUpdate);
